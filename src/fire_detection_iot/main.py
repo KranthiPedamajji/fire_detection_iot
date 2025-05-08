@@ -11,15 +11,6 @@ from dotenv import load_dotenv
 
 app = FastAPI()
 
-# --- AWS S3 Configuration ---
-# AWS_ACCESS_KEY = "AKIA3JQKMP2EUOG7SZYO"  # Replace with your access key
-# AWS_SECRET_KEY = "CvTgo6gad9yazD/8KVQ4ClemNw4q6bB7WWa/NanS"  # Replace with your secret key
-# BUCKET_NAME = "wildfire-project-data"
-# ENDPOINT_ARN = (
-#     "arn:aws:rekognition:us-east-2:776337129097:"
-#     "project/WildfireDet/version/WildfireDet.2025-05-07T20.23.41/1746663820069"
-# )
-# Point to the .env in the project root (works even when app runs elsewhere)
 load_dotenv(Path(__file__).resolve().parents[2] / ".env")
 
 AWS_ACCESS_KEY = getenv("AWS_ACCESS_KEY")
