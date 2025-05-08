@@ -5,6 +5,9 @@ from datetime import datetime
 import pandas as pd
 from io import StringIO
 import traceback
+from pathlib import Path
+from os import getenv
+from dotenv import load_dotenv
 
 app = FastAPI()
 
@@ -16,6 +19,13 @@ app = FastAPI()
 #     "arn:aws:rekognition:us-east-2:776337129097:"
 #     "project/WildfireDet/version/WildfireDet.2025-05-07T20.23.41/1746663820069"
 # )
+# Point to the .env in the project root (works even when app runs elsewhere)
+load_dotenv(Path(__file__).resolve().parents[2] / ".env")
+
+AWS_ACCESS_KEY = getenv("AWS_ACCESS_KEY")
+AWS_SECRET_KEY = getenv("AWS_SECRET_KEY")
+BUCKET_NAME    = getenv("BUCKET_NAME")
+ENDPOINT_ARN   = getenv("ENDPOINT_ARN")
 
 
 # --- boto3 client ---

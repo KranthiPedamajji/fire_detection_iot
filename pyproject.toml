@@ -13,7 +13,8 @@ dependencies = [
     "datetime (>=5.5,<6.0)",
     "pandas (>=2.2.3,<3.0.0)",
     "uvicorn[standard] (>=0.34.2,<0.35.0)",
-    "python-multipart (>=0.0.20,<0.0.21)"
+    "python-multipart (>=0.0.20,<0.0.21)",
+    "python-dotenv (>=1.1.0,<2.0.0)"
 ]
 
 [tool.poetry]

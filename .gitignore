@@ -1,3 +1,5 @@
 # ── Python byte-code and cache ───────────────────────
 __pycache__/
 *.py[cod]
+# ── secrets ────────────────────────
+.env
